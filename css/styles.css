@@ -1,195 +1,195 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;  /*reseteo del margin*/
+    padding: 0; /*reseteo del margin*/
+    box-sizing: border-box;  /*Ajuste del contenido*/
 }
 
-/* :root{} */
+:root{
+    --colorTitulos: white;
+    --espaciadoComun: 2vw;
+}
 
 
 /* encabezado */
 
 .encabezado{
-    display: flex;
-    justify-content: space-between;
-    
+    display: flex;  /*Estructura dinamica del contenedor*/
+    justify-content: space-between;  /*Maximo espacio posible*/
 }
 
 .encabezado__iconos{
-    display: flex;
-    gap: 2vw;
-    width: 10vw;
+    display: flex;  /*Estructura dinamica del contenedor*/
+    gap: var(--espaciadoComun);   /*Espacio entre elementos*/
+    width: 10vw;    /*ancho del elemento*/
 }
 
 /* primer contenedor */
 
 .contenedor__normal{
     background-color: rgb(8,172,140);
-    width: 100%;
-    height: 70vw;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 4.8vw 5vw 0 5vw;
-
+    width: 100%;    /*ancho del elemento*/
+    height: 70vw;   /*Alto del elemento*/
+    display: flex;  /*Estructura dinamica del contenedor*/
+    flex-direction: column;     /*Direccion en columna del contendor*/
+    position: relative;     /*Posicion relativa*/
+    padding: 4.8vw 5vw 0 5vw;   /*Espacio dentro del contenedor*/
 }
 
 .imagen__puntas{
-    position: absolute;
-    top: 0px;
-    left: 23vw;
-    width: 11vw;            
+    position: absolute;     /*Posicion absoluta*/
+    top: 0;   /*Ubicado al inicio del contendor*/
+    left: 23vw;     /*Ubicado por el lado izquierdo*/
+    width: 11vw;    /*ancho del elemento*/    
 }
 
 .icono-menu{
-    color: white;
-    font-size: 3vw;
+    color: var(--colorTitulos);   /*Color blanco para el icono*/
+    font-size: 3vw;     /*Tamaño del icono*/
     
 }
 
 .contendor__titulos{
-    margin-bottom: 3vw;
+    margin-bottom: 3vw; /*Margen debajo del contenedor*/
 }
 
 .contenedor__texto {
-    font-size: 2vw;
-    width: 48vw;
-    display: flex;
-    flex-direction: column;
-    gap: 2vw;
+    font-size: 2vw;     /*Tamaño de la letra*/
+    width: 48vw;    /*ancho del elemento*/
+    display: flex;  /*Estructura dinamica del contenedor*/
+    flex-direction: column;     /*Direccion en columna del contendor*/
+    gap: var(--espaciadoComun);   /*Espacio entre elementos*/
     margin-top: 9vw;
 }
 
 
 .titulos{
-    color: white;
-    font-size: 10vw;
+    color: var(--colorTitulos);   /*Color para el texto*/
+    font-size: 10vw;    /*Tamaño de la letra*/
 }
 
 .boton{
-    width: 10vw;
-    height: 2.8vw;
-    font-size: 1vw;
-    border-radius: 20vw;
-    border: 2px solid black;
-    font-weight: bold;
+    width: 10vw;    /*ancho del elemento*/
+    height: 2.8vw;  /*Alto del elemento*/
+    font-size: 1vw;     /*Tamaño del boton*/
+    border-radius: 20vw;    /*Bordes redondeados para las puntas del boton*/
+    border: 2px solid black;    /*Borde visible para el boton*/
+    font-weight: bold;      /*Darle grosor al texto*/
 }
 
 .boton__rosado{
-    background-color: #ffacb4;
+    background-color: #ffacb4;  /*Color de fondo para el boton*/
 }
 
 .boton__verde{
-    background-color: rgb(8,172,140);
+    background-color: rgb(8,172,140);   /*Color de fondo para el boton*/
 }
 
 .imagen__primera{
-    position: absolute;
-    width: 29vw;
-    height: 48vw;
-    right: 11vw;
-    bottom: 0;
+    position: absolute;     /*Posicion absoluta*/
+    width: 29vw;    /*ancho del elemento*/
+    height: 48vw;   /*Alto del elemento*/
+    right: 11vw;    /*Ubicado por el lado derecho*/
+    bottom: 0;      /*Ubicado al final del contenedor*/
     filter: grayscale(100%);
 }
 
 .numeros{
-    position: absolute;
-    right: 6.6vw;
-    color: white;
-    top: 16vw;
-    text-align: right;
-    
-    
+    position: absolute;     /*Posicion absoluta*/
+    right: 6.6vw;   /*Ubicado por el lado derecho*/
+    color: var(/*Ubicar por el inicio del contendor*/);   /*Color blanco para los numeros*/
+    top: 16vw;  /*Ubicado por el inicio del contendor*/
+    text-align: right;      /*Ubicar el texto del contenedor por la derecha*/
 }
 
 .numeros__linea{
-    width: 3vw;
-    height: 3px;
-    background-color: white;
-    float: right;
+    width: 3vw;     /*ancho del elemento*/
+    height: 3px;    /*Alto del elemento*/
+    background-color: var(--colorTitulos);    /*Fondo de la linea*/
+    float: right;   /*Ubicacion del elemento (flota)*/
 }
 
 .contenedor__scroll{
-    display: flex;
-    align-items: center;
-    color: white;
-    gap: 1vw;
-    margin-top: 4vw;
+    display: flex;  /*Estructura dinamica del contenedor*/
+    align-items: center;    /*Ubicar los elementos del contenedor por el centro*/
+    color: var(--colorTitulos);   /*Color blanco para los elementos*/
+    gap: var(--espaciadoComun);   /*Espacio entre elementos*/
+    margin-top: 4vw;    /*Margen encima del contenedor*/
 }
 
 /* segundo contenedor */
 
 .contenedor__normal--rosado{
-    background-color:#ffacb4;
-    align-items: center;
-    text-align: center;
+    background-color:#ffacb4;   /*Color de fondo del contenedor*/
+    align-items: center;    /*Ubicar los elementos del contenedor por el centro*/
+    text-align: center;     /*Ubicar el texto del contenedor por el centro*/
     
 }
 
 .titulos__dobles{
-    margin-bottom: 2.9vw;
+    margin-bottom: 2.9vw;   /*Margen debajo del contenedor*/
 }
 
 .titulos__pequeño{
-    font-size: 3vw;
+    font-size: 3vw;     /*Tamaño de la letra*/
 }
 
 .contenedor__texto--rosado{
-    width: 80vw;
-    align-items: center;
-    text-align: center;
+    width: 80vw;    /*ancho del elemento*/
+    align-items: center;    /*Ubicar los elementos del contenedor por el centro*/
+    text-align: center;     /*Ubicar el texto del contenedor por el centro*/
 }
 
 .contendor__parrafos{
-    width: 55vw;
-    text-align: center;
+    width: 55vw;    /*ancho del elemento*/
+    text-align: center;     /*Ubicar el texto del contenedor por el centro*/
 }
 
 .titulos--pequeño{
-    font-size: 3vw;
+    font-size: 3vw;     /*Tamaño del texto*/
 } 
 
 .shape__verde{
-    position: absolute;
-    bottom: 5vw;
+    position: absolute;     /*Posicion absoluta*/
+    width: 9vw;     /*ancho del elemento*/
+    bottom: 5vw;    /*Margen debajo del contenedor*/
 }
 
 /* tercer contenedor */
 
 .contenedor__normal-tercero{
-    flex-direction: row;
-    gap: 8vw;
-    align-items: center;
+    flex-direction: row;     /*Direccion en fila del contendor*/
+    gap: 8vw;   /*Espacio entre elementos*/
+    align-items: center;    /*Ubicar los elementos del contenedor por el centro*/
 }
 
 .contenedor__imagen_izquierda{
-    width: 35vw;
-    height: 35vw;
-    overflow: hidden;
-    border: 1px solid;
-    border-radius: 50%;
-    position: relative;
+    width: 35vw;    /*ancho del elemento*/
+    height: 35vw;   /*Alto del elemento*/
+    overflow: hidden;   /*Ocultar lo que se salga del contenedor*/
+    border: 1px solid;  /*Borde visible*/
+    border-radius: 50%;     /*Curvatura para el borde*/
+    position: relative;     /*Posicion relativa*/
 }
 
 .img_izq{
-    width: 120%;
-    height: 110%;
+    width: 120%;    /*ancho del elemento*/
+    height: 110%;   /*Alto del elemento*/
     filter: grayscale(100%);
-    position: absolute;
-    z-index: 1;
+    position: absolute;     /*Posicion absoluta*/
+    z-index: 1;     /*Ubicarla como primera(osea que estara debajo de las siguientes posiciones)*/
 }
 
 .contendor__parrafos--tercero{
-    text-align: left;
-    width: 100%;
-    margin-bottom: 4vw;
+    text-align: left;   /*Ubicar el texto del contenedor por la izquierda*/
+    width: 100%;    /*ancho del elemento*/
+    margin-bottom: 4vw;     /*Margen debajo del contenedor*/
 }
 
 
 .imagen__puntas--tercero{
-    z-index: 2;
-    top: 30%;
-    left: 2.4%;
+    z-index: 2;     /*Ubicarla como segunda(osea que estara encima de la primera posicion)*/
+    top: 30%;   /*Ubicar por el inicio del contendor*/
+    left: 2.4%;     /*Ubicar por la izquierda del contendor*/
 }
 
 

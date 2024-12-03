@@ -121,11 +121,22 @@
     left: 12%;
     z-index: 3;
     width: 80vw;
-    /* filter: invert(1); */
+    filter: invert(1);
 }
 
-.primera_raya--segundo{
-    top: -65%;
+.segunda_raya{
+    position: absolute;
+    top: 25%;
+    left: 63%;
+    height: 8vw;
+}
+
+.texto_curvo{
+    position: absolute;
+    right: 5%;
+    z-index: 4;
+    bottom: 3%;
+    width: 40vw;
 }
 
 .numeros{
@@ -158,11 +169,7 @@
     background-color:#ffacb4;   /*Color de fondo del contenedor*/
     align-items: center;    /*Ubicar los elementos del contenedor por el centro*/
     text-align: center;     /*Ubicar el texto del contenedor por el centro*/
-    
-}
-
-.titulos__dobles{
-    /* margin-bottom: 2.9vw;   Margen debajo del contenedor */
+    position: relative;
 }
 
 .titulos__pequeño{
@@ -188,6 +195,27 @@
     position: absolute;     /*Posicion absoluta*/
     width: 9vw;     /*ancho del elemento*/
     bottom: 5vw;    /*Margen debajo del contenedor*/
+}
+
+.linea_uno{
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    width: 16vw;
+}
+
+.linea_dos{
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+    width: 14vw;
+}
+
+.texto_circ_verde{
+    position: absolute;
+    bottom: -15%;
+    left: 0;
+    width: 21vw;
 }
 
 /* tercer contenedor */
@@ -329,4 +357,8 @@
 .sharpe_grid--segundo{
     left: 77%;
     z-index: 2;
+}
+
+.contendor__parrafos--grid{
+    font-size: 1.5vw;
 }

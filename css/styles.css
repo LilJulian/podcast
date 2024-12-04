@@ -408,3 +408,47 @@
     left: 0;
     transform: scaleX(-1);
 }
+
+.contenedor__flecha{
+    position: absolute;
+    left: 9%;
+    top: 50%;
+    z-index: 2;
+    color: #ffacb4;
+    display: flex;
+    align-items: center;
+    font-size: 1.2vw;
+}
+
+.flecha_izq{
+    font-size: 3vw;
+}
+
+.contenedor__flecha--dere{
+    left: 84%;
+}
+
+/* septimo contenedor */
+
+.titulos--septimo{
+    font-size: 3vw;
+}
+
+.contendor__parrafos--septimo{
+    text-align: start;
+    color: var(--colorTitulos);
+}
+
+.eclipse_sexto_dere--sexptimo{
+    height: 60vw;
+    top: 10%;
+    width: 30vw;
+}
+
+.texto_rosa_curvo{
+    position: absolute;
+    right: 0;
+    /* width: 25vw; */
+    top: 15%;
+    height: 53vw;
+}

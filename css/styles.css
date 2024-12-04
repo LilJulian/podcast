@@ -256,11 +256,11 @@
     left: 2.4%;     /*Ubicar por la izquierda del contendor*/
 }
 
+/* cuarto contenedor */
+
 .--cuarto{
     text-align: left; 
     align-items: start;
-    justify-content: center;
-
 }
 
 .contendor__parrafos--cuarto{
@@ -272,12 +272,30 @@
     position: absolute;
     right: 0.3%;
     bottom: 0;
-    width: 40vw;
+    width: 50vw;
     height: 58vw;
     filter: grayscale(100%);    /*Darle un filtro de colores blanco y negro*/
 }
 
-/* cuarto contenedor */
+.eclipse_dere_cuarto{
+    position: absolute;
+    right: 0;
+    width: 39vw;
+}
+
+.raya_cuarto_pri{
+    position: absolute;
+    top: 10%;
+    left: 35%;
+}
+
+.raya_cuarto_seg{
+    position: absolute;
+    bottom: 10%;
+    left: 35%;
+}
+
+/* quinto contenedor */
 
 .contenedor_grid{
     display: grid;
@@ -361,4 +379,32 @@
 
 .contendor__parrafos--grid{
     font-size: 1.5vw;
+}
+
+/* sexto contenedor */
+
+.contenedor__normal--sexto{
+    background-color: #ffacb4;
+    align-items: center;
+}
+
+.contenedor__texto--sexto{
+    width: 55vw;
+    text-align: center;
+}
+
+.contendor__parrafos--sexto{
+    text-align: center;
+}
+
+.eclipse_sexto_dere{
+    position: absolute;
+    right: 0;
+    height: 50vw;
+    top: 15%;
+}
+
+.eclipse_sexto_dere--izq{
+    left: 0;
+    transform: scaleX(-1);
 }

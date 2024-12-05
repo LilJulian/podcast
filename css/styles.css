@@ -32,7 +32,7 @@
 
 /* primer contenedor */
 
-.contenedor__normal{
+.contenedores{
     background-color: rgb(8,172,140);
     width: 100%;    /*ancho del elemento*/
     height: 70vw;   /*Alto del elemento*/
@@ -42,13 +42,13 @@
     padding: 4.8vw 5vw 0 5vw;   /*Espacio dentro del contenedor*/
 }
 
-.microfono{
+.contenedores__microfono{
     position: absolute;
     right: 50%;
     width: 2.8vw;
 }
 
-.imagen__puntas{
+.contenedores__imagen-puntas{
     position: absolute;     /*Posicion absoluta*/
     top: 0;   /*Ubicado al inicio del contendor*/
     left: 23vw;     /*Ubicado por el lado izquierdo*/
@@ -60,11 +60,7 @@
     font-size: 3vw;     /*Tamaño del icono*/   
 }
 
-.contendor__titulos{
-    margin-bottom: 3vw; /*Margen debajo del contenedor*/
-}
-
-.contenedor__texto {
+.contenedores_texto {
     font-size: 2vw;     /*Tamaño de la letra*/
     width: 48vw;    /*ancho del elemento*/
     display: flex;  /*Estructura dinamica del contenedor*/
@@ -73,8 +69,11 @@
     margin-top: 9vw;
 }
 
+.contenedores_texto__titulos{
+    margin-bottom: 3vw; /*Margen debajo del contenedor*/
+}
 
-.titulos{
+.contenedores_texto__titulo{
     color: var(--colorTitulos);   /*Color para el texto*/
     font-size: 10vw;    /*Tamaño de la letra*/
     height: 8vw;
@@ -174,22 +173,21 @@
 
 /* segundo contenedor */
 
-.contenedor__normal--rosado{
+.contenedores--what-we-do{
     background-color:#ffacb4;   /*Color de fondo del contenedor*/
     align-items: center;    /*Ubicar los elementos del contenedor por el centro*/
     text-align: center;     /*Ubicar el texto del contenedor por el centro*/
-    position: relative;
 }
 
 .titulos__pequeño{
     font-size: 3vw;     /*Tamaño de la letra*/
 }
 
-.titulos__dobles--segundo{
+.titulos_what-we-do{
     margin-bottom: 4vw;
 }
 
-.contenedor__texto--rosado{
+.contenedores_texto--what-we-do{
     width: 80vw;    /*ancho del elemento*/
     align-items: center;    /*Ubicar los elementos del contenedor por el centro*/
     text-align: center;     /*Ubicar el texto del contenedor por el centro*/
@@ -204,7 +202,7 @@
     text-align: start;
 }
 
-.titulos--pequeño{
+.contenedores_texto__titulo--pequeño{
     font-size: 3vw;     /*Tamaño del texto*/
 } 
 
@@ -237,7 +235,7 @@
 
 /* tercer contenedor */
 
-.contenedor__normal-tercero{
+.contenedores--meet{
     flex-direction: row;     /*Direccion en fila del contendor*/
     gap: 8vw;   /*Espacio entre elementos*/
     align-items: center;    /*Ubicar los elementos del contenedor por el centro*/
@@ -260,7 +258,7 @@
     z-index: 1;     /*Ubicarla como primera(osea que estara debajo de las siguientes posiciones)*/
 }
 
-.titulos__dobles--tercero{
+.titulos_meet{
     margin-bottom: 3vw;
 }
 
@@ -279,9 +277,8 @@
 
 /* cuarto contenedor */
 
-.--cuarto{
-    text-align: left; 
-    align-items: start;
+.contenedores--realidad-virtual{
+    background-color: #ffacb4;
 }
 
 .contendor__parrafos--cuarto{
@@ -316,7 +313,7 @@
     left: 35%;
 }
 
-.titulos__dobles--cuarto{
+.titulos_realidad-virtual{
     margin-bottom: 4vw;
 }
 
@@ -408,12 +405,12 @@
 
 /* sexto contenedor */
 
-.contenedor__normal--sexto{
+.contenedores--testimonio{
     background-color: #ffacb4;
     align-items: center;
 }
 
-.contenedor__texto--sexto{
+.contenedores_texto--testimonio{
     width: 55vw;
     text-align: center;
 }
@@ -453,7 +450,7 @@
     left: 84%;
 }
 
-.titulos__dobles--sexto{
+.titulos_testimonio{
     margin-bottom: 4vw;
 }
 
@@ -473,7 +470,7 @@
 
 /* septimo contenedor */
 
-.contenedor__normal--septimo{
+.contenedores--join{
     overflow-x: hidden;
 }
 
@@ -500,7 +497,7 @@
     z-index: 3;
 }
 
-.titulos__dobles--septimo{
+.titulos_join{
     margin-bottom: 4vw;
 }
 
@@ -513,7 +510,7 @@
 
 /* Ultimo contenedor */
 
-.contenedor__normal--ultimo{
+.contenedores--footer{
     background-color: #ffacb4;
     height: 30vw;
     flex-direction: row;
@@ -523,7 +520,7 @@
 .ultimo__grid{
     display: grid;
     grid-template-columns: 23vw 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 10vw;
     grid-template-areas: 
     'ultimo__brand ultimo__team ultimo__podcast ultimo__legal';
     gap: var(--espaciadoComun);
@@ -545,14 +542,14 @@
 @media(max-width: 800px){
 
     /* primero contenedor */
-    .contenedor__normal{
+    .contenedores{
         height: 110vw;
     }
-    .microfono{
+    .contenedores__microfono{
         width: 7vw;
         left: 50%;
     }
-    .imagen__puntas{
+    .contenedores__imagen-puntas{
         width: 20vw;
     }
     .icono-menu{
@@ -561,7 +558,7 @@
     .numeros{
         font-size: 5vw;
     }
-    .titulos{
+    .contenedores_texto__titulo{
         font-size: 12.5vw;
         height: 13vw;
     }

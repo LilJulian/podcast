@@ -7,6 +7,10 @@
     font-family: "Inter", sans-serif;
 }
 
+.podcast{
+    overflow-x: hidden;
+}
+
 :root{
     --colorTitulos: white;
     --espaciadoComun: 2vw;
@@ -83,6 +87,7 @@
     border-radius: 20vw;    /*Bordes redondeados para las puntas del boton*/
     border: 2px solid black;    /*Borde visible para el boton*/
     font-weight: bold;      /*Darle grosor al texto*/
+    cursor: pointer;
 }
 
 .boton__rosado{
@@ -152,11 +157,11 @@
 }
 
 .numeros__linea{
-    width: 2vw;     /*ancho del elemento*/
+    width: 1vw;     /*ancho del elemento*/
     height: 0.2vw;    /*Alto del elemento*/
     background-color: var(--colorTitulos);    /*Fondo de la linea*/
     float: right;   /*Ubicacion del elemento (flota)*/   
-    border: none;
+    border: 0.1vw solid var(--colorTitulos);
 }
 
 .contenedor__scroll{
@@ -193,6 +198,10 @@
 .contendor__parrafos{
     width: 55vw;    /*ancho del elemento*/
     text-align: center;     /*Ubicar el texto del contenedor por el centro*/
+}
+
+.contendor__parrafos--primero{
+    text-align: start;
 }
 
 .titulos--pequeño{
@@ -464,6 +473,10 @@
 
 /* septimo contenedor */
 
+.contenedor__normal--septimo{
+    overflow-x: hidden;
+}
+
 .titulos--septimo{
     font-size: 3vw;
 }
@@ -473,7 +486,7 @@
     color: var(--colorTitulos);
 }
 
-.eclipse_sexto_dere--sexptimo{
+.eclipse_sexto_dere--septimo{
     /* height: 50vw; */
     top: 10%;
     /* width: 29vw; */
@@ -481,14 +494,20 @@
 
 .texto_rosa_curvo{
     position: absolute;
-    right: 0;
+    right: -9%;
     width: 27vw;
     top: 15%;
-    /* height: 45vw; */
+    z-index: 3;
 }
 
 .titulos__dobles--septimo{
     margin-bottom: 4vw;
+}
+
+.imagen__puntas--septimo{
+    left: 78%;
+    z-index: 2;
+    top: 20%;
 }
 
 
@@ -518,4 +537,172 @@
 
 .ultimo__texto{
     color: var(--colorTitulos);
+}
+
+
+/* media_querys */
+
+@media(max-width: 800px){
+
+    /* primero contenedor */
+    .contenedor__normal{
+        height: 110vw;
+    }
+    .microfono{
+        width: 7vw;
+        left: 50%;
+    }
+    .imagen__puntas{
+        width: 20vw;
+    }
+    .icono-menu{
+        font-size: 5vw;
+    } 
+    .numeros{
+        font-size: 5vw;
+    }
+    .titulos{
+        font-size: 12.5vw;
+        height: 13vw;
+    }
+    .contendor__parrafos{
+        font-size: 3.5vw;
+    }
+    .boton{
+        font-size: 2vw;
+        width: 15vw;
+        height: 6vw;
+    }
+    .shape__primera_img{
+        top: 71%;
+    }
+    .primera_raya{
+        display: none;
+    }
+    .segunda_raya{
+        display: none;
+    }
+    /* segundo contenedor */
+    .titulos__pequeño{
+        font-size: 6vw;
+    }
+    .texto_circ_verde{
+        width: 30vw;
+    }
+    .shape__verde{
+        width: 16vw;
+    }
+    .titulos--tercero{
+        font-size: 11.4vw;
+        height: 9vw;
+    }
+    /* cuarto contenedor */
+    .raya_cuarto_pri, .raya_cuarto_seg{
+        display: none;
+    }
+    .eclipse_dere_cuarto{
+        width: 45vw;
+        height: 98vw;
+    }
+    .chica_tres_d{
+        /* width: 70vw; */
+        height: 90vw;
+    }
+    /* contenedor grid */
+
+    .contenedor_grid{
+        height: 880vw;
+        grid-template-columns: 100%;
+        grid-template-rows: 110vw 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        'imagenes'
+        'grid__texto'
+        'imagenes_segunda'
+        'grid__texto-segunda'
+        'imagenes_tercera'
+        'grid__texto-tercera';
+    }
+    .titulos--grid{
+        font-size: 6vw;
+    }
+    .contendor__parrafos--grid{
+        font-size: 4vw;
+        width: 65vw;
+    }
+    .numeros__linea--grid{
+        width: 8vw;
+        height: 1vw;
+        display:ruby;
+    }
+    .textos{
+        gap: 5vw;
+    }
+    .sharpe_grid{
+        width: 20vw;
+    }
+    /* sexto contenedor */
+    .titulos--sexto{
+        font-size: 10vw;
+    }
+    .contendor__parrafos--sexto{
+        font-size: 2.7vw;
+        width: 40vw;
+        align-self: center;
+    }
+    .linea__sexto{
+        width: 7vw;
+    }
+    .titulos__jeanne{
+        font-size: 4vw;
+    }
+    .eclipse_sexto_dere{
+        height: 70vw;
+    }
+    .contenedor__flecha{
+        font-size: 3vw;
+        top: 45%;
+    }
+    .flecha_izq{
+        font-size: 5vw;
+    }
+
+    /* septimo contendor */
+
+    .contenedor__normal--septimo{
+        height: 85vw;
+        /* overflow-x: hidden; */
+    }
+    .titulos--septimo{
+        font-size: 4vw;
+    }
+    .texto_rosa_curvo{
+        width: 38vw;
+        right: -14%;
+    }
+    .imagen__puntas--septimo{
+        width: 15vw;
+        left: 70%;
+    }
+    /* ultimo contenedor */
+    .titulos__ultimos{
+        font-size: 5vw;
+    }
+    .podcast{
+        overflow-x: hidden;
+    }
+    /* footer */
+    .ultimo__grid{
+        grid-template-columns: 35vw 35vw;
+        grid-template-rows: 21vw 21vw;
+        grid-template-areas: 
+        'ultimo__brand ultimo__team'
+        'ultimo__podcast ultimo__legal';
+        align-items: center;
+        align-content: center;
+        
+    }
+    
+    
+
+
 }

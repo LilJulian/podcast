@@ -2,18 +2,26 @@
 
 *{
     margin: 0;  /*reseteo del margin*/
-    padding: 0; /*reseteo del margin*/
+    padding: 0; /*reseteo del padding*/
     box-sizing: border-box;  /*Ajuste del contenido*/
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", sans-serif;   /*Aplicacion de la familia de la fuente de texto*/
 }
 
 .podcast{
-    overflow-x: hidden;
+    overflow-x: hidden; /*Ocultar el contenido que salga del eje x*/
 }
 
 :root{
     --colorTitulos: white;
     --espaciadoComun: 2vw;
+    --fondororsa: #ffacb4;
+    --fondoverde: rgb(8,172,140);
+    --losabsolutos: absolute;
+    --losrelativos: relative;
+    --derecha: right;
+    --izquierda: left;
+    --anular: none;
+    --mitad_porc: 50%;
 }
 
 
@@ -33,25 +41,25 @@
 /* primer contenedor */
 
 .contenedores{
-    background-color: rgb(8,172,140);
+    background-color: var(--fondoverde);    /*Color de fondo*/
     width: 100%;    /*ancho del elemento*/
     height: 70vw;   /*Alto del elemento*/
     display: flex;  /*Estructura dinamica del contenedor*/
     flex-direction: column;     /*Direccion en columna del contendor*/
-    position: relative;     /*Posicion relativa*/
+    position: var(--losrelativos);     /*Posicion relativa*/
     padding: 4.8vw 5vw 0 5vw;   /*Espacio dentro del contenedor*/
 }
 
 .contenedores__microfono{
-    position: absolute;
-    right: 50%;
-    width: 2.8vw;
+    position: var(--losabsolutos); /*Posicion absoluta*/
+    right: var(--mitad_porc);   /*ubicar por la derecha*/
+    width: 2.8vw;   /*tamaño de la imagen*/
 }
 
 .contenedores__imagen-puntas{
-    position: absolute;     /*Posicion absoluta*/
+    position: var(--losabsolutos);     /*Posicion absoluta*/
     top: 0;   /*Ubicado al inicio del contendor*/
-    left: 23vw;     /*Ubicado por el lado izquierdo*/
+    left: 23vw;     /*Ubicado por el lado izquierdo del contenedor*/
     width: 11vw;    /*ancho del elemento*/    
 }
 
@@ -61,12 +69,12 @@
 }
 
 .contenedores_texto {
-    font-size: 2vw;     /*Tamaño de la letra*/
+    font-size: var(--espaciadoComun);     /*Tamaño de la letra*/
     width: 48vw;    /*ancho del elemento*/
     display: flex;  /*Estructura dinamica del contenedor*/
     flex-direction: column;     /*Direccion en columna del contendor*/
     gap: var(--espaciadoComun);   /*Espacio entre elementos*/
-    margin-top: 9vw;
+    margin-top: 9vw;    /*Margen por debajo del contenedor*/
 }
 
 .contenedores_texto__titulos{
@@ -76,7 +84,7 @@
 .contenedores_texto__titulo{
     color: var(--colorTitulos);   /*Color para el texto*/
     font-size: 10vw;    /*Tamaño de la letra*/
-    height: 8vw;
+    height: 8vw;    /*Alto del contenedor*/
 }
 
 .boton{
@@ -86,80 +94,80 @@
     border-radius: 20vw;    /*Bordes redondeados para las puntas del boton*/
     border: 2px solid black;    /*Borde visible para el boton*/
     font-weight: bold;      /*Darle grosor al texto*/
-    cursor: pointer;
+    cursor: pointer;    /*Estilo para cambiar la forma del cursor*/
 }
 
 .boton__rosado{
-    background-color: #ffacb4;  /*Color de fondo para el boton*/
+    background-color: var(--fondororsa);  /*Color de fondo para el boton*/
 }
 
 .boton__verde{
-    background-color: rgb(8,172,140);   /*Color de fondo para el boton*/
+    background-color: var(--fondoverde);   /*Color de fondo para el boton*/
 }
 
-.imagen__primera{
-    position: absolute;     /*Posicion absoluta*/
-    width: 29vw;    /*ancho del elemento*/
+.contenedores_imagenes__mujer{
+    position: var(--losabsolutos);     /*Posicion absoluta*/
+    width: 29vw;    /*ancho de la imagen*/
     height: 48vw;   /*Alto del elemento*/
     right: 11vw;    /*Ubicado por el lado derecho*/
     bottom: 0;      /*Ubicado al final del contenedor*/
-    filter: grayscale(100%);    /*Darle un filtro de colores blanco y negro*/
-    z-index: 4;
+    filter: grayscale(100%);    /*Darle colores oscuros a la imagen*/
+    z-index: 4;     /*Ubicarla como cuarta(osea que estara encima de la tercera posicion)*/
 }
 
-.primer_eclipes{
-    position: absolute;
-    bottom: 0;
-    right: 1.8%;
-    z-index: 3;
-    width: 46vw;
+.contenedores_imagenes__eclipse{
+    position: var(--losabsolutos);  /*Posicion absoluta*/
+    bottom: 0;  /*Ubicado al final del contenedor*/
+    right: 1.8%;    /*Ubicado por el lado derecho*/
+    z-index: 3;     /*Ubicarla como tercera(osea que estara encima de la segunda posicion)*/
+    width: 46vw;    /*ancho de la imagen*/
 }
 
-.shape__primera_img{
-    position: absolute;
-    right: 2%;
-    top: 55%;
-    width: 14%;
+.contenedores_imagenes__shape{
+    position: var(--losabsolutos);  /*Posicion absoluta*/
+    right: 2%;  /*Ubicado por el lado derecho*/
+    top: 55%;   /*Ubicado por el inicio del contenedor*/
+    width: 14%; /*Ancho de la imagen*/
 }
 
-.primera_raya{
-    position: absolute;
-    height: 80vw;
-    top: -61%;
-    left: 12%;
-    z-index: 3;
-    width: 80vw;
-    filter: invert(1);
+.contenedores_imagenes__raya{
+    position: var(--losabsolutos);  /*Posicion absoluta*/
+    height: 80vw;   /*Alto de la imagen*/
+    top: -61%;  /*Ubicado por el inicio del contenedor*/
+    left: 12%;  /*Ubicado por el lado izquierdo del contenedor*/
+    z-index: 3;     /*Ubicarla como tercera(osea que estara encima de la segunda posicion)*/
+    width: 80vw;    /*Ancho de la imagen*/
+    filter: invert(1);  /*Invertir los colores de la imagen*/
 }
 
-.segunda_raya{
-    position: absolute;
-    top: 25%;
-    left: 63%;
-    height: 8vw;
+.contenedores_imagenes__raya-inv{
+    position: var(--losabsolutos);  /*Posicion absoluta*/
+    top: 25%;   /*Ubicado por el inicio del contendor*/
+    left: 63%;  /*Ubicado por el lado izquierdo del contenedor*/
+    height: 8vw;    /*Alto del elemento*/
 }
 
-.texto_curvo{
-    position: absolute;
-    right: 5%;
-    z-index: 4;
-    bottom: 3%;
-    width: 40vw;
+.contenedores_imagenes__texto{
+    position: var(--losabsolutos);  /*Posicion absoluta*/
+    right: 5%;  /*Ubicado por el lado derecho del contenedor*/
+    z-index: 4; /*Ubicarla como cuarta(osea que estara encima de la tercera posicion)*/
+    bottom: 3%;/*Ubicado al final del contenedor*/
+    width: 40vw;    /*ancho de la imagen*/
 }
 
-.numeros{
-    position: absolute;     /*Posicion absoluta*/
-    right: 6.6vw;   /*Ubicado por el lado derecho*/
+.contenedores_numeros{
+    position: var(--losabsolutos);     /*Posicion absoluta*/
+    right: 6.6vw;   /*Ubicado por el lado derecho del contenedor*/
     color: var(--colorTitulos);   /*Color blanco para los numeros*/
     top: 16vw;  /*Ubicado por el inicio del contendor*/
-    text-align: right;      /*Ubicar el texto del contenedor por la derecha*/
+    text-align: var(--derecha);      /*alinear el texto por la derecha*/
 }
 
-.numeros__linea{
+.contenedores_numeros__linea{
     width: 1vw;     /*ancho del elemento*/
     height: 0.2vw;    /*Alto del elemento*/
-    background-color: var(--colorTitulos);    /*Fondo de la linea*/
-    float: right;   /*Ubicacion del elemento (flota)*/   
+    background-color: var(--colorTitulos);    /*Color de fondo*/
+    float: var(--derecha);   /*Ubicacion del elemento (flota)*/   
     border: 0.1vw solid var(--colorTitulos);
 }
 
@@ -174,9 +182,9 @@
 /* segundo contenedor */
 
 .contenedores--what-we-do{
-    background-color:#ffacb4;   /*Color de fondo del contenedor*/
+    background-color: var(--fondororsa);   /*Color de fondo del contenedor*/
     align-items: center;    /*Ubicar los elementos del contenedor por el centro*/
-    text-align: center;     /*Ubicar el texto del contenedor por el centro*/
+    text-align: center;     /*Alinear el texto del contenedor por el centro*/
 }
 
 .titulos__pequeño{
@@ -184,7 +192,7 @@
 }
 
 .titulos_what-we-do{
-    margin-bottom: 4vw;
+    margin-bottom: 4vw; /*Margen debajo del contenedor*/
 }
 
 .contenedores_texto--what-we-do{
@@ -193,44 +201,44 @@
     text-align: center;     /*Ubicar el texto del contenedor por el centro*/
 }
 
-.contendor__parrafos{
+.contenedores_texto__parrafo{
     width: 55vw;    /*ancho del elemento*/
     text-align: center;     /*Ubicar el texto del contenedor por el centro*/
 }
 
-.contendor__parrafos--primero{
-    text-align: start;
+.contenedores_texto__parrafo--inicial{
+    text-align: start;  /*Alinear texto por la derecha*/
 }
 
 .contenedores_texto__titulo--pequeño{
     font-size: 3vw;     /*Tamaño del texto*/
 } 
 
-.shape__verde{
-    position: absolute;     /*Posicion absoluta*/
-    width: 9vw;     /*ancho del elemento*/
-    bottom: 5vw;    /*Margen debajo del contenedor*/
+.contenedores_imagenes__shape-verde{
+    position: var(--losabsolutos);     /*Posicion absoluta*/
+    width: 9vw;     /*ancho de la imagen*/
+    bottom: 5vw;    /*Ubicado al final del contenedor*/
 }
 
-.linea_uno{
-    position: absolute;
-    left: 5%;
-    top: 15%;
-    width: 16vw;
+.contenedores_imagenes__raya-down{
+    position: var(--losabsolutos);  /*Posicion absoluta*/
+    left: 5%;   /*Ubicado por el lado izquierdo del contenedor*/
+    top: 15%;   /*Ubicado por el inicio del contendor*/
+    width: 16vw;    /*ancho de la imagen*/
 }
 
-.linea_dos{
-    position: absolute;
-    right: 5%;
-    bottom: 8%;
-    width: 14vw;
+.contenedores_imagenes__raya-up{
+    position: var(--losabsolutos);  /*Posicion absoluta*/
+    right: 5%;  /*Ubicado por el lado derecho del contenedor*/
+    bottom: 8%; /*Ubicado al final del contenedor*/
+    width: 14vw;    /*Ancho de la imagen*/
 }
 
-.texto_circ_verde{
-    position: absolute;
-    bottom: -15%;
-    left: 0;
-    width: 21vw;
+.contenedores_imagenes__texto-verde{
+    position: var(--losabsolutos);  /*Posicion absoluta*/
+    bottom: -15%;   /*Ubicado al final del contenedor*/
+    left: 0;    /*Ubicado por el lado izquierdo del contenedor*/
+    width: 21vw;    /*ancho de la imagen*/
 }
 
 /* tercer contenedor */
@@ -241,35 +249,35 @@
     align-items: center;    /*Ubicar los elementos del contenedor por el centro*/
 }
 
-.contenedor__imagen_izquierda{
-    width: 35vw;    /*ancho del elemento*/
+.contenedores_imagenes--meet{
+    width: 35vw;    /*ancho de la imagen*/
     height: 35vw;   /*Alto del elemento*/
     overflow: hidden;   /*Ocultar lo que se salga del contenedor*/
     border: 1px solid;  /*Borde visible*/
-    border-radius: 50%;     /*Curvatura para el borde*/
-    position: relative;     /*Posicion relativa*/
+    border-radius: var(--mitad_porc);     /*Curvatura para el borde*/
+    position: var(--losrelativos);     /*Posicion relativa*/
 }
 
-.img_izq{
-    width: 120%;    /*ancho del elemento*/
+.contenedores_imagenes__viendo-cel{
+    width: 120%;    /*ancho de la imagen*/
     height: 110%;   /*Alto del elemento*/
-    filter: grayscale(100%);
-    position: absolute;     /*Posicion absoluta*/
+    filter: grayscale(100%);    /*Darle colores oscuros a la imagen*/
+    position: var(--losabsolutos);     /*Posicion absoluta*/
     z-index: 1;     /*Ubicarla como primera(osea que estara debajo de las siguientes posiciones)*/
 }
 
-.titulos_meet{
-    margin-bottom: 3vw;
+.contenedores_texto__titulo--meet{
+    margin-bottom: 3vw;     /*Ubicado al final del contenedor*/
 }
 
-.contendor__parrafos--tercero{
-    text-align: left;   /*Ubicar el texto del contenedor por la izquierda*/
+.contenedores_texto__parrafo--meet{
+    text-align: var(--izquierda);   /*Ubicar el texto del contenedor por la izquierda*/
     width: 100%;    /*ancho del elemento*/
     margin-bottom: 4vw;     /*Margen debajo del contenedor*/
 }
 
 
-.imagen__puntas--tercero{
+.contenedores__imagen-puntas--meet{
     z-index: 2;     /*Ubicarla como segunda(osea que estara encima de la primera posicion)*/
     top: 30%;   /*Ubicar por el inicio del contendor*/
     left: 2.4%;     /*Ubicar por la izquierda del contendor*/
@@ -278,428 +286,416 @@
 /* cuarto contenedor */
 
 .contenedores--realidad-virtual{
-    background-color: #ffacb4;
+    background-color: var(--fondororsa);    /*Color de fondo*/
 }
 
-.contendor__parrafos--cuarto{
-    text-align: left; 
-    width: 40vw;
+.contenedores_texto__parrafo--realidad-virtual{
+    text-align: var(--izquierda);   /*Alinear el texto por la izquierda*/
+    width: 40vw;    /*ancho del elemento*/
 }
 
-.chica_tres_d{
-    position: absolute;
-    right: 0.3%;
-    bottom: 0;
-    width: 50vw;
-    height: 58vw;
-    filter: grayscale(100%);    /*Darle un filtro de colores blanco y negro*/
+.contenedores_imagenes__chica-realidad{
+    position: var(--losabsolutos);  /*Posicion absoluta*/
+    right: 0.3%;    /*Ubicado por el lado derecho del contenedor*/
+    bottom: 0;  /*Ubicado al final del contenedor*/
+    width: 50vw;    /*ancho de la imagen*/
+    height: 58vw;   /*Alto de la imagen*/
+    filter: grayscale(100%);    /*Darle colores oscuros a la imagen*/
 }
 
-.eclipse_dere_cuarto{
-    position: absolute;
-    right: 0;
-    width: 39vw;
+.contenedores_imagenes__eclipse-realidad{
+    position: var(--losabsolutos);  /*Posicion absoluta*/
+    right: 0;   /*Ubicado por el lado derecho del contenedor*/
+    width: 39vw;    /*ancho de la imagen*/
 }
 
-.raya_cuarto_pri{
-    position: absolute;
-    top: 10%;
-    left: 35%;
+.contenedores_imagenes__raya-realidad-up{
+    position: var(--losabsolutos);  /*Posicion absoluta*/
+    top: 10%;   /*Ubicado por el inicio del contendor*/
+    left: 35%;  /*Ubicado por el lado izquierdo del contenedor*/
 }
 
-.raya_cuarto_seg{
-    position: absolute;
-    bottom: 10%;
-    left: 35%;
+.contenedores_imagenes__raya-realidad-down{
+    position: var(--losabsolutos);  /*Posicion absoluta*/
+    bottom: 10%;    /*Ubicado al final del contenedor*/
+    left: 35%;  /*Ubicado por el lado izquierdo del contenedor*/
 }
 
-.titulos_realidad-virtual{
-    margin-bottom: 4vw;
+.contenedores_texto__titulos-realidad{
+    margin-bottom: 4vw; /*Margen debajo del contenedor*/
 }
 
 /* quinto contenedor */
 
 .contenedor_grid{
-    display: grid;
-    width: 100%;
-    background-color: rgb(8,172,140);
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 60vw 60vw 60vw;
+    display: grid;  /*Display grid*/
+    width: 100%;    /*ancho del contenedor*/
+    background-color: var(--fondoverde);    /*Color de fondo*/
+    grid-template-columns: var(--mitad_porc) var(--mitad_porc); /*Columnas de la grid*/
+    grid-template-rows: 60vw 60vw 60vw;     /*Filas de la grid*/
     grid-template-areas: 
-    'imagenes grid__texto'
-    'grid__texto-segunda imagenes_segunda'
-    'imagenes_tercera grid__texto-tercera';
-    padding: 4.8vw 5vw 0 5vw; 
-    gap: var(--espaciadoComun);
+    'contenedores_imagenes-grid contenedor_grid__texto--up'
+    'contenedor_grid__texto--mid imagenes_mid'
+    'imagenes_down contenedor_grid__texto--down';           /*Areas de la grid*/
+    padding: 4.8vw 5vw 0 5vw;   /*Relleno del contenedor*/
+    gap: var(--espaciadoComun); /*Espacio entre elementos*/
 }
 
-.imagenes{
-    grid-area: imagenes;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.contenedores_imagenes-grid{
+    grid-area: contenedores_imagenes-grid;  /*area de la grid*/
+    display: flex; /*Display flex*/
+    justify-content: center;    /*Justificar contenido por el centro*/
+    align-items: center;    /*Alinear items por el centro*/
+    position: var(--losrelativos); /*Posicion relativa*/
 }
 
-.textos{
-    padding: 11vw 2vw;
-    display: flex;
-    flex-direction: column;
-    gap: 2vw;
-    justify-content: center;
+.contenedor_grid__texto{
+    padding: 11vw var(--espaciadoComun);    /*Relleno del contenedor*/
+    display: flex;  /*Display flex*/
+    flex-direction: column; /*Direccion en columna*/
+    gap: var(--espaciadoComun); /*Espacio entre elementos*/
+    justify-content: center;     /*Justificar contenido por el centro*/
 }
 
-.imagen_grid{
-    width: 80%;
-    height: 80%;
-    border-radius: 2vw;
-    filter: grayscale(100%);    /*Darle un filtro de colores blanco y negro*/
+.contenedores_imagenes__chica-hablando{
+    width: 80%;     /*ancho de la imagen*/
+    height: 80%;    /*Alto de la imagen*/
+    border-radius: var(--espaciadoComun);
+    filter: grayscale(100%);    /*Darle colores oscuros a la imagen*/
 }
 
-.grid__texto{
-    grid-area: grid__texto;
+.contenedor_grid__texto--up{
+    grid-area: contenedor_grid__texto--up;   /*area de la grid*/
 }
 
-.grid__texto-segunda{
-    grid-area: grid__texto-segunda;
+.contenedor_grid__texto--mid{
+    grid-area: contenedor_grid__texto--mid;  /*area de la grid*/
 }
 
-.imagenes_segunda{
-    grid-area: imagenes_segunda;
+.imagenes_mid{
+    grid-area: imagenes_mid;     /*area de la grid*/
 }
 
-.imagenes_tercera{
-    grid-area: imagenes_tercera;
+.imagenes_down{
+    grid-area: imagenes_down;    /*area de la grid*/
 }
 
-.grid__texto-tercera{
-    grid-area: grid__texto-tercera;
+.contenedor_grid__texto--down-tercera{
+    grid-area: contenedor_grid__texto--down;     /*area de la grid*/
 }
 
-.titulos--grid{
-    font-size: 3vw;
-    color: var(--colorTitulos);
+.grid__texto-titulos{
+    font-size: 3vw;     /*Tamaño del texto*/
+    color: var(--colorTitulos);     /*color del texto*/
 }
 
-.contendor__parrafos--grid{
-    width: 30vw;
-    text-align: left;
+.contenedores_texto__parrafo--grid{
+    width: 30vw;    /*ancho del parrafo*/
+    text-align: var(--izquierda);   /*Alinear el texto por la izquierda*/
+    font-size: 1.5vw;   /*Tamaño del texto*/
 }
 
-.sharpe_grid{
-    position: absolute;
-    z-index: 1;
-    width: 10vw;
-    top: 3.5%;
-    left: 0;
-}
+.contenedores_imagenes__sharpe-grid{
+    position: var(--losabsolutos);  /*Posicion absoluta*/
+    z-index: 1;     /*Ubicarla como primera(osea que estara debajo del resto de posiciones)*/
+    width: 10vw;    /*ancho de la imagen*/
+    top: 3.5%;  /*Ubicado por el inicio del contendor*/
+    left: 0;    /*Ubicado por el lado izquierdo del contenedor*/
+}   
 
-.sharpe_grid--segundo{
-    left: 77%;
-    z-index: 2;
-}
-
-.contendor__parrafos--grid{
-    font-size: 1.5vw;
+.contenedores_imagenes__sharpe-grid-mid{
+    left: 80%;  /*Ubicado por el lado izquierdo del contenedor*/
 }
 
 /* sexto contenedor */
 
 .contenedores--testimonio{
-    background-color: #ffacb4;
-    align-items: center;
+    background-color: var(--fondororsa);    /*Color de fondo*/
+    align-items: center;    /*Alinear items por el centro*/
 }
 
 .contenedores_texto--testimonio{
-    width: 55vw;
-    text-align: center;
+    width: 55vw;    /*ancho del elemento*/
+    text-align: center; /*Alinear el texto por el centro*/
 }
 
-.contendor__parrafos--sexto{
-    text-align: center;
+.contenedores_texto__parrafo--testimonio{
+    text-align: center; /*Alinear el texto por el centro*/
 }
 
 .eclipse_sexto_dere{
-    position: absolute;
-    right: 0;
-    height: 50vw;
-    top: 15%;
+    position: var(--losabsolutos);  /*Posicion absoluta*/
+    right: 0;   /*Ubicado por el lado derecho del contenedor*/
+    height: 50vw;   /*Alto de la imagen*/
+    top: 15%;   /*Ubicado por el inicio del contendor*/
 }
 
 .eclipse_sexto_dere--izq{
-    left: 0;
-    transform: scaleX(-1);
+    left: 0;    /*Ubicado por el lado izquierdo del contenedor*/
+    transform: scaleX(-1);  /*Invertir el sentido de la imagen*/
 }
 
-.contenedor__flecha{
-    position: absolute;
-    left: 9%;
-    top: 50%;
-    z-index: 2;
-    color: #ffacb4;
-    display: flex;
-    align-items: center;
-    font-size: 1.2vw;
+.contenedores_flecha{
+    position: var(--losabsolutos);  /*Posicion absoluta*/
+    left: 9%;   /*Ubicado por el lado izquierdo del contenedor*/
+    top: var(--mitad_porc); /*Ubicado por el inicio del contendor*/
+    z-index: 2;     /*Ubicarla como segunda(osea que estara encima de la primera posicion)*/
+    color: var(--fondororsa);   /*Color del texto*/
+    display: flex;  /*Display flex*/
+    align-items: center;    /*Alinear items por el centro*/
+    font-size: 1.2vw;   /*Tamaño del texto*/
 }
 
 .flecha_izq{
-    font-size: 3vw;
+    font-size: 3vw; /*Tamaño del icono*/
 }
 
-.contenedor__flecha--dere{
-    left: 84%;
+.contenedor__flecha--next{
+    left: 84%;  /*Ubicado por el lado izquierdo del contenedor*/
 }
 
 .titulos_testimonio{
-    margin-bottom: 4vw;
+    margin-bottom: 4vw; /*Margen debajo del contenedor*/
 }
 
 .titulos__jeanne{
-    font-size: 2vw;
-    align-self: center;
+    font-size: 2vw; /*Tamaño del texto*/    
+    align-self: center;     /*Alinearse por el centro*/
 }
 
 .linea__sexto{
-    background-color: var(--colorTitulos);
-    border: solid var(--colorTitulos);
-    width: 5vw;
-    align-self: center;
-    margin: 3vw 0 3vw 0;
+    background-color: var(--colorTitulos);  /*Color de fondo*/
+    border: solid var(--colorTitulos); /*Borde del elemento*/
+    width: 5vw; /*ancho del elemento*/
+    align-self: center; /*Alinearse por el centro*/
+    margin: 3vw 0 3vw 0;    /*Margen del elemento*/
 
 }
 
 /* septimo contenedor */
 
 .contenedores--join{
-    overflow-x: hidden;
+    overflow-x: hidden; /*Ocultar el contenido sobrante por el eje x*/
 }
 
-.titulos--septimo{
-    font-size: 3vw;
+.contenedores_texto__titulo--join{
+    font-size: 3vw; /*Tamaño del texto*/
 }
 
-.contendor__parrafos--septimo{
-    text-align: start;
-    color: var(--colorTitulos);
+.contenedores_texto__parrafo--join{
+    text-align: start;  /*Alinear texto por la derecha*/
+    color: var(--colorTitulos); /*Color del texto*/
 }
 
 .eclipse_sexto_dere--septimo{
-    /* height: 50vw; */
-    top: 10%;
-    /* width: 29vw; */
+    top: 10%;   /*Ubicado por el inicio del contendor*/
 }
 
 .texto_rosa_curvo{
-    position: absolute;
-    right: -9%;
-    width: 27vw;
-    top: 15%;
-    z-index: 3;
+    position: var(--losabsolutos);  /*Posicion absoluta*/
+    right: -9%; /*Ubicado por el lado derecho del contenedor*/
+    width: 27vw;    /*ancho de la imagen*/
+    top: 15%;   /*Ubicado por el inicio del contendor*/
+    z-index: 3;     /*Ubicarla como tercera(osea que estara encima de la segunda posicion)*/
 }
 
 .titulos_join{
-    margin-bottom: 4vw;
+    margin-bottom: 4vw; /*Margen debajo del contenedor*/
 }
 
-.imagen__puntas--septimo{
-    left: 78%;
-    z-index: 2;
-    top: 20%;
+.imagen__puntas--join{
+    left: 78%;  /*Ubicado por el lado izquierdo del contenedor*/
+    z-index: 2; /*Ubicarla como segunda(osea que estara encima de la primera posicion)*/
+    top: 20%;   /*Ubicado por el inicio del contendor*/
 }
 
 
 /* Ultimo contenedor */
 
 .contenedores--footer{
-    background-color: #ffacb4;
-    height: 30vw;
-    flex-direction: row;
-    flex-wrap: wrap;
+    background-color: var(--fondororsa);    /*Color de fondo*/
+    height: 28vw;   /*Alto del contenedor*/
+    flex-direction: row;    /*Direccion en fila*/
+    flex-wrap: wrap;    /*Poner debajo el contenido que no alcance a estar en la fila*/
 }
 
 .ultimo__grid{
-    display: grid;
-    grid-template-columns: 23vw 1fr 1fr 1fr;
-    grid-template-rows: 10vw;
+    display: grid;  /*Display grid*/
+    grid-template-columns: 23vw 1fr 1fr 1fr;    /*Columnas de la grid*/
+    grid-template-rows: 10vw;   /*Filas de la grid*/
     grid-template-areas: 
-    'ultimo__brand ultimo__team ultimo__podcast ultimo__legal';
-    gap: var(--espaciadoComun);
-    width: 100%;
+    'ultimo__brand ultimo__team ultimo__podcast ultimo__legal'; /*Areas de la grid*/
+    gap: var(--espaciadoComun); /*Espacio entre elementos*/
+    width: 100%;    /*ancho del contenedor*/
 }
 
 .titulos__ultimos{
-    font-size: 1.4vw;
-    height: 3vw;
+    font-size: 1.4vw;   /*Tamaño del texto*/
 }
 
 .ultimo__texto{
-    color: var(--colorTitulos);
+    color: var(--colorTitulos); /*Color del texto*/
 }
 
 
 /* media_querys */
 
-@media(max-width: 800px){
+@media(max-width: 800px){ /*cuando el contenido llegue a 800px:*/
 
     /* primero contenedor */
     .contenedores{
-        height: 110vw;
+        height: 110vw;  /*Alto del contenedor*/
     }
     .contenedores__microfono{
-        width: 7vw;
-        left: 50%;
+        width: 7vw;  /*ancho del contenedor*/
+        left: var(--mitad_porc);    /*Ubicado por el lado izquierdo del contenedor*/
     }
     .contenedores__imagen-puntas{
-        width: 20vw;
+        width: 20vw;    /*ancho del contenedor*/
     }
     .icono-menu{
-        font-size: 5vw;
+        font-size: 5vw; /*Tamaño del icono*/
     } 
-    .numeros{
-        font-size: 5vw;
+    .contenedores_numeros{
+        font-size: 5vw; /*Tamaño del elemento*/
     }
-    .contenedores_texto__titulo{
-        font-size: 12.5vw;
-        height: 13vw;
-    }
-    .contendor__parrafos{
-        font-size: 3.5vw;
+
+    .contenedores_texto__parrafo{
+        font-size: 3.5vw;   /*Tamaño del texto*/
+        margin: 4vw 0;  /*Margen del elemento*/
     }
     .boton{
-        font-size: 2vw;
-        width: 15vw;
-        height: 6vw;
+        font-size: 2vw; /*Tamaño del texto*/
+        width: 15vw;    /*ancho del boton*/
+        height: 6vw;    /*Alto del boton*/
     }
-    .shape__primera_img{
-        top: 71%;
+    .contenedores_imagenes__shape{
+        top: 71%;   /*Ubicado por el inicio del contendor*/
     }
-    .primera_raya{
-        display: none;
+    .contenedores_imagenes__raya{
+        display: var(--anular);     /*No mostrar el elemento*/
     }
-    .segunda_raya{
-        display: none;
+    .contenedores_imagenes__raya-inv{
+        display: var(--anular);     /*No mostrar el elemento*/
     }
     /* segundo contenedor */
     .titulos__pequeño{
-        font-size: 6vw;
+        font-size: 6vw; /*Tamaño del texto*/
     }
-    .texto_circ_verde{
-        width: 30vw;
+    .contenedores_imagenes__texto-verde{
+        width: 30vw;    /*ancho del contenedor*/
     }
-    .shape__verde{
-        width: 16vw;
-    }
-    .titulos--tercero{
-        font-size: 11.4vw;
-        height: 9vw;
+    .contenedores_imagenes__shape-verde{
+        width: 16vw;    /*ancho del contenedor*/
+        right: 43%; /*Ubicado por el lado derecho del contenedor*/
     }
     /* cuarto contenedor */
-    .raya_cuarto_pri, .raya_cuarto_seg{
-        display: none;
+    .contenedores_imagenes__raya-realidad-up, .contenedores_imagenes__raya-realidad-down{
+        display: var(--anular); /*No mostrar el elemento*/
     }
-    .eclipse_dere_cuarto{
-        width: 45vw;
-        height: 98vw;
+    .contenedores_imagenes__eclipse-realidad{
+        width: 45vw;    /*ancho del contenedor*/
+        height: 98vw;   /*Alto de la imagen*/
     }
-    .chica_tres_d{
-        /* width: 70vw; */
-        height: 90vw;
+    .contenedores_imagenes__chica-realidad{
+        height: 90vw;   /*Alto de la imagen*/
     }
     /* contenedor grid */
 
     .contenedor_grid{
-        height: 880vw;
-        grid-template-columns: 100%;
-        grid-template-rows: 110vw 1fr 1fr 1fr 1fr 1fr;
+        height: 880vw;  /*Alto del contenedor*/
+        grid-template-columns: 100%;    /*Columnas de la grid*/
+        grid-template-rows: 110vw 1fr 1fr 1fr 1fr 1fr;  /*Filas de la grid*/
         grid-template-areas: 
-        'imagenes'
-        'grid__texto'
-        'imagenes_segunda'
-        'grid__texto-segunda'
-        'imagenes_tercera'
-        'grid__texto-tercera';
+        'contenedores_imagenes-grid'
+        'contenedor_grid__texto--up'
+        'imagenes_mid'
+        'contenedor_grid__texto--mid'
+        'imagenes_down'
+        'contenedor_grid__texto--down';     /*Areas de la grid*/
     }
-    .titulos--grid{
-        font-size: 6vw;
+    .grid__texto-titulos{
+        font-size: 6vw; /*Tamaño del texto*/
     }
-    .contendor__parrafos--grid{
-        font-size: 4vw;
-        width: 65vw;
+    .contenedores_texto__parrafo--grid{
+        font-size: 4vw; /*Tamaño del texto*/
+        width: 65vw;    /*ancho del elemento*/
     }
     .numeros__linea--grid{
-        width: 8vw;
-        height: 1vw;
-        display:ruby;
+        width: 8vw; /*ancho del elemento*/
+        height: 1vw;    /*Alto del elemento*/
+        
+        border: 0.6vw solid var(--colorTitulos);
     }
-    .textos{
-        gap: 5vw;
+    .contenedor_grid__texto{
+        gap: 5vw;   /*Espacio entre elementos*/
     }
-    .sharpe_grid{
-        width: 20vw;
+
+    .contenedores_imagenes__sharpe-grid{
+        width: 20vw;    /*ancho de la imagen*/
+    }
+
+    .contenedores_imagenes__chica-hablando{
+        height: 80%;    /*Alto de la imagen*/
     }
     /* sexto contenedor */
-    .titulos--sexto{
-        font-size: 10vw;
+    .contenedores_texto__titulo--testimonio{
+        font-size: 10vw;    /*Tamaño del texto*/
     }
-    .contendor__parrafos--sexto{
-        font-size: 2.7vw;
-        width: 40vw;
-        align-self: center;
+    .contenedores_texto__parrafo--testimonio{
+        font-size: 2.7vw;   /*Tamaño del texto*/
+        width: 40vw;    /*ancho del elemento*/
+        align-self: center; /*Alinearse por el centro*/
     }
-    .linea__sexto{
-        width: 7vw;
+    .linea-testimonio{
+        width: 7vw; /*ancho del elemento*/
     }
     .titulos__jeanne{
-        font-size: 4vw;
+        font-size: 4vw; /*Tamaño del texto*/
     }
     .eclipse_sexto_dere{
-        height: 70vw;
+        height: 70vw;   /*Alto de la imagen*/
     }
-    .contenedor__flecha{
-        font-size: 3vw;
-        top: 45%;
+    .contenedores_flecha{
+        font-size: 3vw; /*Tamaño del texto*/
+        top: 45%;   /*Ubicado por el inicio del contendor*/
     }
     .flecha_izq{
-        font-size: 5vw;
+        font-size: 5vw; /*Tamaño del icono*/
     }
 
     /* septimo contendor */
 
-    .contenedor__normal--septimo{
-        height: 85vw;
-        /* overflow-x: hidden; */
+    .contenedores--join{
+        height: 85vw;   /*Alto del contenedor*/
     }
-    .titulos--septimo{
-        font-size: 4vw;
+    .contenedores_texto__titulo--join{
+        font-size: 4vw; /*Tamaño del texto*/
     }
     .texto_rosa_curvo{
-        width: 38vw;
-        right: -14%;
+        width: 38vw;    /*ancho de la imagen*/
+        right: -14%;    /*Ubicado por el lado derecho del contenedor*/
     }
-    .imagen__puntas--septimo{
-        width: 15vw;
-        left: 70%;
+    .imagen__puntas--join{
+        width: 15vw;    /*ancho de la imagen*/
+        left: 70%;  /*Ubicado por el lado izquierdo del contenedor*/
     }
     /* ultimo contenedor */
     .titulos__ultimos{
-        font-size: 5vw;
+        font-size: 5vw; /*Tamaño del texto*/
     }
     .podcast{
-        overflow-x: hidden;
+        overflow-x: hidden; /*Ocultar el contenido que salga del eje x*/
     }
     /* footer */
     .ultimo__grid{
-        grid-template-columns: 35vw 35vw;
-        grid-template-rows: 21vw 21vw;
+        grid-template-columns: 35vw 35vw;   /*Columnas de la grid*/
+        grid-template-rows: 21vw 21vw;  /*Filas de la grid*/
         grid-template-areas: 
         'ultimo__brand ultimo__team'
-        'ultimo__podcast ultimo__legal';
-        align-items: center;
-        align-content: center;
+        'ultimo__podcast ultimo__legal';    /*Areas de la grid*/
+        align-items: center;    /*Alinear items por el centro*/
+        align-content: center;  /*Alinear contenido por el centro*/
         
     }
-    
-    
-
-
 }
